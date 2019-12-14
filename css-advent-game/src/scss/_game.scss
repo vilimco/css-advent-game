@@ -1,0 +1,26 @@
+.game {
+  display: none;
+  position: absolute;
+  left: calc(50% - 250px);
+  top: calc(50% - 275px);
+  height: 550px;
+
+  .playing-ground, .player {
+    z-index: 5;
+  }
+
+  .background {
+    display: inline-block;
+    position: absolute;
+    border-radius: 11% 89% 7% 93% / 79% 11% 89% 21%;
+    z-index: 1;
+    top: -50px;
+    bottom: -100px;
+    left: -125px;
+    right: -125px;
+    background: #2980B9; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    filter: blur(25px);
+  }
+}

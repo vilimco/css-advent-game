@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="public/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div>
+    <!--    Left-right-->
+    <input autofocus checked name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+    <input name="left-right" tabindex="0" type="radio"/>
+
+    <!--    Up-down-->
+    <input checked name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+    <input name="up-down" tabindex="1" type="radio"/>
+
+    <br>
+    <div id="gameplay"></div>
+    <div id="instructions"></div>
+
+    <div class="start-screen">
+        <h2>
+            <span>C</span>hri<span>S</span>tma<span>S</span> game
+        </h2>
+
+        <p>
+            Santa is in trouble and is in <span>dire need of your help!</span>
+            <br>
+            Are you ready to help him?
+        </p>
+        <a href="#instructions">Yes, yes, yes!!!</a>
+    </div>
+    <div class="instructions-screen">
+        <p>
+            Santa is in trouble!
+
+            The rooftops are frozen and that makes it really difficult to slide into chimneys.
+
+            Help him by taking him to the goal while avoiding slippery ice!
+        </p>
+
+        <h3>You'll need these instructions:</h3>
+
+        <ul>
+            <li>Avoid these: <img src="ice-1.png"/>, <img src="ice-2.png"> - these will <span>kill you</span></li>
+            <li>Move with <img src="arrow-up.png"/>, <img src="arrow-down.png"> , <img src="arrow-left.png"> , <img
+                    src="arrow-right.png"></li>
+            <li>Santa needs to be careful when moving around, so switch direction of movement with <img src="tab.png">
+                (tab)
+            </li>
+        </ul>
+
+        <a href="#gameplay">Let me help Santaaa!</a>
+
+    </div>
+    <div class="game">
+        <div class="background"></div>
+        <div class="player">
+            <img src="santa.png"/>
+            <div class="directions">
+                <div class="direction-display">
+                    <div class="icon">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="icon">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="icon">
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+                <div class="direction-display">
+                    <div class="icon">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="icon">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="icon">
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="playing-ground">
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <img src="ice-1.png"/>
+            <div class="empty-field"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field"></div>
+            <div class="empty-field is-goal"></div>
+            <div class="empty-field is-goal"></div>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <img src="ice-2.png"/>
+            <div class="empty-field is-goal"></div>
+            <div class="empty-field is-goal"></div>
+        </div>
+    </div>
+
+    <div class="end-game">
+        <h2>Oh no! The Santa broke his hip!</h2>
+        <p>You've been naughty, haven't you? You made Santa fall from the rooftops and broke his hip. Now nobody will
+            get any presents.</p>
+        <a href="/css-advent-game/index.html">Try again</a>
+    </div>
+    <div class="game-finished">
+        <h2>You did it, the Christmas is saved!</h2>
+        <p>You've helped Santa survive the icy and slippery rooftops and with that, you've helped in making Christmas
+            beautiful and joyful again!</p>
+        <a href="/css-advent-game/index.html">Take Santa on another ride</a>
+    </div>
+
+
+</div>
+</body>
+</html>
