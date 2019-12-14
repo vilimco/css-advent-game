@@ -1,0 +1,178 @@
+@import "reset";
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  counter-reset: slides;
+}
+
+.slide-holder {
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+input[type="radio"] {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 50;
+  opacity: 0.01;
+  flex-grow: 1;
+}
+
+input[type="radio"]:checked ~ .slide {
+  right: -100%;
+}
+
+input[type="radio"]:checked + .slide {
+  right: 0;
+}
+
+.slide {
+  transition: all 0.3s ease-in-out;
+  background: white;
+  display: inline-flex;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-grow: 5;
+
+  h1 {
+    font-size: 70px;
+  }
+
+  h1 + p {
+    margin-top: 80px;
+  }
+
+  p {
+    font-size: 32px;
+
+    img {
+      max-width: 200px;
+      max-height: 200px;
+      margin: 24px;
+    }
+  }
+
+  ul {
+    li {
+      font-size: 46px;
+      margin: 24px;
+    }
+  }
+}
+
+.slide::after {
+  counter-increment: slides;
+  content: "Slide " counter(slides);
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+
+.footer {
+  display: inline-flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: flex-start;
+  padding: 32px;
+
+  span {
+    transition: all 0.3s ease-in-out;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  img {
+    max-height: 32px;
+  }
+}
+
+input[type="radio"]:nth-child(2):checked ~ .footer span:nth-child(2) {
+  opacity: 0.01;
+}
+
+
+.reveal-revert {
+  position: absolute;
+  bottom: 120px;
+  padding: 24px 36px;
+  cursor: pointer;
+  opacity: 0.01;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  background: #909c9f;
+  font-weight: bold;
+}
+
+#reveal {
+  display: none;
+  cursor: pointer;
+
+  &:checked {
+    opacity: 1;
+
+    & ~ input[type="radio"] {
+      opacity: 1;
+    }
+
+    & ~ .reveal-revert {
+      opacity: 1;
+    }
+
+
+    & ~ .slide {
+      position: relative;
+      width: 200px;
+      height: 160px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      border: 1px solid black;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+      h1 {
+        font-size: 14px;
+      }
+
+      h1 + p {
+        margin-top: 16px;
+      }
+
+      p {
+        font-size: 6px;
+
+        img {
+          max-width: 40px;
+          max-height: 40px;
+          margin: 5px;
+        }
+      }
+
+      ul {
+        li {
+          font-size: 9px;
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
