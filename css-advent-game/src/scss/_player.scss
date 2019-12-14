@@ -1,0 +1,17 @@
+.player {
+  width: 25px;
+  height: 25px;
+  margin: -2px;
+  position: absolute;
+  transition: all 0.15s ease-in-out;
+
+  img {
+    position: absolute;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    z-index: 2;
+  }
+
+  @import "player/directions";
+}

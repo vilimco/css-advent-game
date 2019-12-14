@@ -1,0 +1,84 @@
+@import "reset";
+@import "variables";
+@import "game";
+@import "player";
+@import "playing-ground/playing-ground";
+@import "gameplay";
+@import "end-game";
+@import "start-screen";
+@import "instructions-game";
+
+input[type="radio"] {
+  opacity: 0.01;
+}
+
+$xControls: 19;
+$yControls: 23;
+
+@for $i from 0 to $xControls {
+  input[type="radio"]:nth-child(#{$i + 1}):checked ~ .game .player {
+    left: calc(var(--base-dimension) * (#{$i}));
+  }
+}
+
+@for $i from $xControls to $xControls + $yControls {
+  input[type="radio"]:nth-child(#{$i + 1}):checked ~ .game .player {
+    top: calc(var(--base-dimension) * (#{$i - $xControls}));
+  }
+}
+
+@font-face {
+  font-family: 'Mountains of Christmas';
+  font-style: normal;
+  src: local("Mountains of Christmas"), local("MountainsofChristmas-Regular"), url(https://fonts.gstatic.com/s/mountainsofchristmas/v8/dVGBFPwd6G44IWDbQtPewylJhLDHyIrT3I5b5eGTHmw.woff2) format("woff2");
+}
+
+body, html {
+  background-color: #00b894;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Mountains of Christmas';
+}
+
+body {
+  background-image: url("/css-advent-game/background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+@for $i from $xControls to $yControls +$xControls {
+  input[type="radio"]:nth-child(#{$i + 1}):focus ~ .game .player > .directions {
+    transform: rotate(90deg);
+  }
+}
+
+
+#gameplay:target {
+  & ~ .game {
+    display: inline-block;
+  }
+
+  & ~ .start-screen {
+    display: none;
+  }
+
+  & ~ .instructions-screen {
+    display: none;
+  }
+}
+
+#instructions:target {
+  & ~ .game {
+    display: none;
+  }
+
+  & ~ .start-screen {
+    display: none;
+  }
+
+  & ~ .instructions-screen {
+    display: inline-flex;
+  }
+}
